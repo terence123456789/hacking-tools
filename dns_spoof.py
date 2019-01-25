@@ -23,7 +23,7 @@ def process_packet(packet):
             # The rest of the fields are automatically filled by scapy
             answer = scapy.DNSRR(rrname=qname, rdata="172.217.26.68")
 
-            # replace actual DNS answer with fake one (look at actual DNS packet for better understanding)
+            # replace actual DNS answer with fake one 
             scapy_packet[scapy.DNS].an = answer
 
             # reset number of DNS answers in the packet to 1. Initially there were others but we are only creating 1
